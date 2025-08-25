@@ -61,7 +61,19 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				school: {
+					primary: 'hsl(var(--school-primary))',
+					'primary-light': 'hsl(var(--school-primary-light))',
+					success: 'hsl(var(--school-success))',
+					warning: 'hsl(var(--school-warning))',
+					info: 'hsl(var(--school-info))',
+					surface: 'hsl(var(--school-surface))',
+					'surface-variant': 'hsl(var(--school-surface-variant))'
 				}
+			},
+			fontFamily: {
+				matrix: ['IBM Plex Mono', 'monospace'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

@@ -1,88 +1,85 @@
+@import '@fontsource/ibm-plex-mono/400.css';
+@import '@fontsource/ibm-plex-mono/600.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* School App Design System - Multi-theme support */
 
 @layer base {
+  /* Light Theme (Default) */
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
-
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
-
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 221 83% 53%;
     --primary-foreground: 210 40% 98%;
-
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
-
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
-
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
+    --ring: 221 83% 53%;
     --radius: 0.5rem;
 
+    /* School-specific colors */
+    --school-primary: 221 83% 53%;
+    --school-primary-light: 221 83% 70%;
+    --school-success: 142 71% 45%;
+    --school-warning: 48 96% 53%;
+    --school-info: 199 89% 48%;
+    --school-surface: 0 0% 98%;
+    --school-surface-variant: 220 14% 96%;
+
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
+  /* Dark Theme */
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
-
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
-
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+
+    --school-primary: 221 83% 70%;
+    --school-primary-light: 221 83% 80%;
+    --school-success: 142 71% 55%;
+    --school-warning: 48 96% 63%;
+    --school-info: 199 89% 58%;
+    --school-surface: 217.2 32.6% 17.5%;
+    --school-surface-variant: 217.2 32.6% 20%;
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -92,6 +89,46 @@ All colors MUST be HSL.
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
+  /* Matrix Theme */
+  .matrix {
+    --background: 0 0% 8%;
+    --foreground: 120 100% 75%;
+    --card: 0 0% 12%;
+    --card-foreground: 120 100% 75%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 120 100% 75%;
+    --primary: 120 100% 50%;
+    --primary-foreground: 0 0% 8%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 120 100% 75%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 120 50% 60%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 120 100% 75%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 8%;
+    --border: 120 100% 25%;
+    --input: 0 0% 15%;
+    --ring: 120 100% 50%;
+
+    --school-primary: 120 100% 50%;
+    --school-primary-light: 120 100% 70%;
+    --school-success: 120 100% 40%;
+    --school-warning: 60 100% 50%;
+    --school-info: 180 100% 50%;
+    --school-surface: 0 0% 12%;
+    --school-surface-variant: 0 0% 18%;
+
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 120 100% 75%;
+    --sidebar-primary: 120 100% 50%;
+    --sidebar-primary-foreground: 0 0% 8%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 120 100% 75%;
+    --sidebar-border: 120 100% 25%;
+    --sidebar-ring: 120 100% 50%;
+  }
 }
 
 @layer base {
@@ -100,6 +137,52 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground transition-colors duration-300;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  .matrix body {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  .matrix .matrix-font {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  .matrix-grid {
+    background-image: 
+      linear-gradient(rgba(0, 255, 0, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 0, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}
+
+@layer components {
+  .school-button {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .school-button-primary {
+    @apply school-button bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2;
+  }
+
+  .school-button-secondary {
+    @apply school-button bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2;
+  }
+
+  .school-card {
+    @apply rounded-lg border bg-card text-card-foreground shadow-sm;
+  }
+
+  .school-surface {
+    @apply bg-school-surface border border-border/50;
+  }
+
+  .matrix .school-card {
+    @apply border-primary/30 bg-card/50 backdrop-blur-sm;
+  }
+
+  .matrix .school-surface {
+    @apply bg-school-surface/50 border-primary/30 backdrop-blur-sm;
   }
 }
